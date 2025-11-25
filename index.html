@@ -1,0 +1,127 @@
+!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solar System</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            background: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+        
+        .solar-system {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            color: white;
+        }
+        
+        h1 {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            font-size: 2rem;
+            margin: 0;
+        }
+        
+        .sun {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100px;
+            height: 100px;
+            background: radial-gradient(circle, #FFD700, #FFA500);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 0 50px #FFD700;
+        }
+        
+        .orbit1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 200px;
+            height: 200px;
+            border: 1px dashed rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        .planet1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 30px;
+            height: 30px;
+            background: #4da6ff;
+            border-radius: 50%;
+            transform: translate(-50%, -50%) translateX(100px);
+            animation: orbit1 6s linear infinite;
+        }
+        
+        @keyframes orbit1 {
+            from {
+                transform: translate(-50%, -50%) rotate(0deg) translateX(100px) rotate(0deg);
+            }
+            to {
+                transform: translate(-50%, -50%) rotate(360deg) translateX(100px) rotate(-360deg);
+            }
+        }
+        
+        .orbit2 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 350px;
+            height: 350px;
+            border: 1px dashed rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        .planet2 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 40px;
+            height: 40px;
+            background: #ff4d4d;
+            border-radius: 50%;
+            transform: translate(-50%, -50%) translateX(175px);
+            animation: orbit2 12s linear infinite;
+        }
+        
+        @keyframes orbit2 {
+            from {
+                transform: translate(-50%, -50%) rotate(0deg) translateX(175px) rotate(0deg);
+            }
+            to {
+                transform: translate(-50%, -50%) rotate(360deg) translateX(175px) rotate(-360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="solar-system">
+        <h1>Solar System</h1>
+        <div class="sun"></div>
+        <div class="orbit1"></div>
+        <div class="orbit2"></div>
+        <div class="planet1"></div>
+        <div class="planet2"></div>
+    </div>
+</body>
+
+</html>
